@@ -1,0 +1,27 @@
+[project]
+name = "apz-pzpi-22-10-ielizarenko-oleksandr"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "NureIelizarenkoOleksandr",email = "oleksandr.ielizarenko@nure.ua"}
+]
+readme = "README.md"
+requires-python = "^3.11"
+
+dependencies = [
+    "fastapi (>=0.115.12,<0.116.0)",
+    "sqlalchemy (>=2.0.41,<3.0.0)",
+    "alembic (>=1.16.1,<2.0.0)",
+    "pydantic (>=2.11.5,<3.0.0)",
+    "psycopg2-binary (>=2.9.10,<3.0.0)",
+    "asyncpg (>=0.30.0,<0.31.0)",
+    "fastapi-pagination (>=0.13.1,<0.14.0)",
+    "uvicorn (>=0.34.3,<0.35.0)"
+]
+
+[tool.poetry]
+package-mode = false
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
