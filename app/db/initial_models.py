@@ -63,3 +63,10 @@ class Schedule(Base):
             self.delay_minutes = actual_minutes - planned_minutes
             return self.delay_minutes
         return 0
+
+class User(Base):
+    __tablename__ = "user"
+    id = Column(Integer, primary_key=True, index=True)
+    email = Column(String, unique=True, nullable=False)
+    password = Column(String, nullable=False)
+    username = Column(String, nullable=False)

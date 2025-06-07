@@ -33,6 +33,7 @@ class CRUDBase:
             db_instance = self.model(**data.model_dump())
             session.add(db_instance)
             await session.flush()
+            await session.commit()
             return db_instance
 
     async def get(self, id_: int):
