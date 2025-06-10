@@ -3,3 +3,6 @@ run:
 
 install:
 	poetry install
+
+migration:
+	alembic revision --autogenerate -m "add times to stops"

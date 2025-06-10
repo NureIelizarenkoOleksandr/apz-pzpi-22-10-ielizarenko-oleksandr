@@ -8,11 +8,25 @@ class AverageDelayResponse(BaseModel):
     average_delay_minutes: float
 
 
+class VehicleOut(BaseModel):
+    vehicle_type: str
+    registration_number: str
+    brand: str
+    model: str
+    capacity: int
+
+    model_config = {
+        "from_attributes": True
+    }
+
+
 class BaseSchedulesOut(BaseModel):
     id: int
     vehicle_id: int
     departure_time: time
     arrival_time: time
+
+    vehicle: VehicleOut = None
 
     model_config = {
         "from_attributes": True
@@ -27,6 +41,8 @@ class RouteOut(BaseModel):
     model_config = {
         "from_attributes": True
     }
+
+
 
 class DetailedRouteOut(RouteOut):
     route_number: str
