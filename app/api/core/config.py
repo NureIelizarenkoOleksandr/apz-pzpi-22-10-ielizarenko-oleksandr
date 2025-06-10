@@ -12,5 +12,7 @@ load_dotenv(dotenv_path=dotenv_path)
 
 class Settings(BaseSettings):
     SECRET_KEY: str
+    ADMIN_USERNAME: str
+    ADMIN_PASSWORD: str
 
 settings = Settings()
