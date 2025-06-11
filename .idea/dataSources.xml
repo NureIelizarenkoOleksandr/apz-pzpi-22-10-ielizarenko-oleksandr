@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:postgresql://localhost:5432/atark</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="railway@mainline.proxy.rlwy.net" uuid="938ecb0e-994c-440c-be36-6d0efb00f922">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://mainline.proxy.rlwy.net:22254/railway</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
