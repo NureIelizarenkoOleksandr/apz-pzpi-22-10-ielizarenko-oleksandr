@@ -3,6 +3,8 @@ from sqlalchemy.orm import sessionmaker
 
 from app.api.core.config import settings
 
+print(settings.sqlalchemy_database_url)
+
 SQLALCHEMY_DATABASE_URL = settings.sqlalchemy_database_url
 engine = create_async_engine(SQLALCHEMY_DATABASE_URL, echo=False)
 
