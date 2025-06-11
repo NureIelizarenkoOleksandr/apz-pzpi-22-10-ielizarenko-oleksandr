@@ -7,6 +7,7 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import joinedload, Session, aliased
 
+from app.api.core.config import settings
 from app.api.endpoints.auth import get_current_user
 from app.api.shemas.routes import RouteOut, AverageDelayResponse, DetailedRouteOut, CreateRoute
 from app.crud.routes import CRUDRoutes, crud_routes
@@ -14,6 +15,10 @@ from app.db.initial_models import Schedule, Route, User, StopTime, Stop, Vehicle
 from app.db.session import get_db
 
 router = APIRouter()
+
+@router.get("/db/url")
+def get_db_url():
+    return [settings.sqlalchemy_database_url, settings.sqlalchemy_sync_database_url]
 
 @router.get("/routes", response_model=Page[RouteOut]
             )
