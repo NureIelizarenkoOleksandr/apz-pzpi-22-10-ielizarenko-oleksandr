@@ -35,6 +35,8 @@ stages:
   jobs:
   - deployment: DeployApp
     environment: 'production'
+    pool:
+      name: 'Default'
     strategy:
       runOnce:
         deploy:
