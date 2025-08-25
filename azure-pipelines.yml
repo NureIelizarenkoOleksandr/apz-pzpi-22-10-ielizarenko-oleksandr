@@ -17,8 +17,7 @@ stages:
   jobs:
   - job: BuildAndPush
     pool:
-      name: 'Azure Pipelines'
-      vmImage: 'ubuntu-latest'
+      name: 'Default'
     steps:
     - checkout: self
 
