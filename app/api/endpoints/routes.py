@@ -16,6 +16,10 @@ from app.db.session import get_db
 
 router = APIRouter()
 
+@router.get("/test")
+def test():
+    return {"msg": "Hello World"}
+
 @router.get("/db/url")
 def get_db_url():
     return [settings.sqlalchemy_database_url, settings.sqlalchemy_sync_database_url]
