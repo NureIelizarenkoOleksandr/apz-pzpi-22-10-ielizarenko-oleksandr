@@ -6,11 +6,11 @@ trigger:
 variables:
   imageName: 'fastapiproject'
   tag: 'latest'
-  azureSubscription: 'Azure subscription 1'
-  acrName: 'fastapiproject'
-  acrLoginServer: 'fastapiproject.azurecr.io'
-  appServiceName: 'fastapiprojectweb'
-  resourceGroup: 'fastapi-rg'
+  azureSubscription: 'Azure subscription fastapi'
+  acrName: 'registrylb5'
+  acrLoginServer: 'registrylb5.azurecr.io'
+  appServiceName: 'ASP-lb5-a3fb'
+  resourceGroup: 'lb-5'
 
 stages:
 - stage: Build
