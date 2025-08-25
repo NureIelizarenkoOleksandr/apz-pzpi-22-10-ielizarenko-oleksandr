@@ -9,7 +9,7 @@ variables:
   azureSubscription: 'Azure subscription 1'
   acrName: 'registrylb5'
   acrLoginServer: 'registrylb5.azurecr.io'
-  appServiceName: 'ASP-lb5-a3fb'
+  appServiceName: 'lb-5-fastapi'
   resourceGroup: 'lb-5'
 
 stages:
