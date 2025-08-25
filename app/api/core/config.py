@@ -11,15 +11,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
 
 
 class Settings(BaseSettings):
-    SECRET_KEY: str = "test"
-    ADMIN_USERNAME: str = "test"
-    ADMIN_PASSWORD: str = "test"
+    SECRET_KEY: str = "supersecret123"
+    ADMIN_USERNAME: str = "admin_user"
+    ADMIN_PASSWORD: str = "strongpass456"
 
-    POSTGRES_USER: str = "test"
-    POSTGRES_PASSWORD: str = "test"
-    POSTGRES_HOST: str = "test"
-    POSTGRES_PORT: str = "test"
-    POSTGRES_DB: str = "test"
+    POSTGRES_USER: str = "pguser"
+    POSTGRES_PASSWORD: str = "pgpassword"
+    POSTGRES_HOST: str = "localhost"
+    POSTGRES_PORT: str = "5432"
+    POSTGRES_DB: str = "testdb"
 
     @property
     def sqlalchemy_database_url(self) -> str:
